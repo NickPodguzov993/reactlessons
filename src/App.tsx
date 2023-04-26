@@ -3,6 +3,7 @@ import './App.css';
 import {Accordion} from "./components/accordion/Accordion";
 import {Rating} from "./components/rating/Rating";
 import {PageTitle} from "./components/accordion/PageTitle";
+import OnOff from "./components/onOff/OnOff";
 
 function App() {
     return (
@@ -10,7 +11,7 @@ function App() {
           <PageTitle title={'This is App component'} />
           <PageTitle title={'This is App cnt'} />
 
-            <Rating value={2}/>
+
             <Accordion title={'Accordion1111111'} collapsed={true}/>
             <Accordion title={'Accordion2222222'} collapsed={false}/>
             <Rating value={0}/>
@@ -19,6 +20,7 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
+            <OnOff color={true}/>
         </div>
     );
 }

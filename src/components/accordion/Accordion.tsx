@@ -2,16 +2,11 @@ import React from "react";
 import {PageTitle} from "./PageTitle";
 
 export function Accordion(props:{title:string, collapsed:boolean}) {
-    if(props.collapsed === true){
+
         return  <div>
             <AccordionTitle title={props.title}/>
-            <AccordionBody/>
+            {!props.collapsed && <AccordionBody/>}
         </div>
-    } else {
-        return   <div>
-            <AccordionTitle title={props.title}/>
-        </div>
-    }
 }
 
 function AccordionTitle(props: {title:string}) {
