@@ -1,17 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './OnOff.css';
 
 type PropsType = {
-    color:boolean
+
 }
 
 
 export const OnOff = (props:PropsType) => {
+
+    const [on,setOn] = useState(false)
+
+    const changeOnColor = ()=> {
+        setOn(!on)
+    }
+
     return (
         <div>
-            <div className={props.color ? 'on' : ''}>on</div>
-            <div className={!props.color ? 'off' : ''}>off</div>
-            <div className={props.color ? 'on' : 'off'}>round</div>
+            <div onClick={changeOnColor} className={on ? 'on' : ''}>on</div>
+            <div onClick={changeOnColor} className={!on ? 'off' : ''}>off</div>
+            <div className={on ? 'on' : 'off'}>round</div>
         </div>
     );
 };

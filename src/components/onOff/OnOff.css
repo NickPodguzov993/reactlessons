@@ -1,8 +1,14 @@
 .on {
     background-color: green;
+    width: 50px;
+    border:black;
+    margin-top: 10px;
+    display: inline-block;
 
 }
 .off {
     background-color: red;
-
+    width: 50px;
+    border:black;
+    display: inline-block;
 }

@@ -4,6 +4,8 @@ import {Accordion} from "./components/accordion/Accordion";
 import {Rating} from "./components/rating/Rating";
 import {PageTitle} from "./components/accordion/PageTitle";
 import OnOff from "./components/onOff/OnOff";
+import {UncontrolledAccordion} from "./components/accordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/rating/UncontrolledRating";
 
 function App() {
     return (
@@ -20,7 +22,11 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
-            <OnOff color={true}/>
+            <OnOff />
+            <OnOff />
+            <OnOff />
+            <UncontrolledAccordion title={'Uncontrolled'}/>
+            <UncontrolledRating/>
         </div>
     );
 }
